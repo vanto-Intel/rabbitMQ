@@ -1,4 +1,4 @@
-I. Currency exchange request
+I. Currency exchange request<br>
     1. Instructions how to REQUEST data from currency_exchange microservice that I provided for remote clients <br>
         The currency_exchange_server always turns on on my computer (acts as server that the currency_exchange microservice runs on)
         As a remote client who wants to request data from the microservice, you need to: <br>
