@@ -42,9 +42,9 @@ I. Currency exchange request<br>
                 print("Currency Rates Source Not Ready yet!!! sorry for inconvenience")
 II. Currency code request <br>
     1. Request data <br>
-        create an CurrCode object<br>
-        call function get_code()<br>
-        example:<br>
+        - create an CurrCode object<br>
+        - call function get_code()<br>
+        - example:<br>
         curr_code = CurrCode('Japan')<br>
         response = curr_code.get_code()<br>
     2. Receive data<br>
