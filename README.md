@@ -2,9 +2,9 @@ I. Currency exchange request<br>
     1. Instructions how to REQUEST data from currency_exchange microservice that I provided for remote clients <br>
         The currency_exchange_server always turns on on my computer (acts as server that the currency_exchange microservice runs on)
         As a remote client who wants to request data from the microservice, you need to: <br>
-            import class currency_exchange_client into  your  python project <br>
-            import json since my microservice will return you a json object as a string that is transmitted by using rabbitMQ <br>
-            then create an object curr with the construction method of class CurrConverter with three parameters: base_currency, dest_currency, and amount
+            - import class currency_exchange_client into  your  python project <br>
+            - import json since my microservice will return you a json object as a string that is transmitted by using rabbitMQ <br>
+            - Then create an object curr with the construction method of class CurrConverter with three parameters: base_currency, dest_currency, and amount
             Using method exchange() without parameter to call for service.<br>
             For example: code showed how to call the service is given below<br>
             ####################################################
