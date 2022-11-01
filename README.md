@@ -1,12 +1,12 @@
 I. Currency exchange request
-    1. Instructions how to REQUEST data from currency_exchange microservice that I provided for remote clients
+    1. Instructions how to REQUEST data from currency_exchange microservice that I provided for remote clients <br>
         The currency_exchange_server always turns on on my computer (acts as server that the currency_exchange microservice runs on)
-        As a remote client who wants to request data from the microservice, you need to:
-            import class currency_exchange_client into  your  python project
-            import json since my microservice will return you a json object as a string that is transmitted by using rabbitMQ
+        As a remote client who wants to request data from the microservice, you need to: <br>
+            import class currency_exchange_client into  your  python project <br>
+            import json since my microservice will return you a json object as a string that is transmitted by using rabbitMQ <br>
             then create an object curr with the construction method of class CurrConverter with three parameters: base_currency, dest_currency, and amount
-            Using method exchange() without parameter to call for service.
-            For example: code showed how to call the service is given below
+            Using method exchange() without parameter to call for service.<br>
+            For example: code showed how to call the service is given below<br>
             ####################################################
             from currency_exchange_client import CurrConverter
             import json
@@ -40,17 +40,17 @@ I. Currency exchange request
                 print("Rates is %.2f and total is %.2f" %(response['rate'], response['total'])) #you will get a reponse json object which is presented like {'total':[Total Amount], 'rate': [Rate]}
             else:#if you provide the wrong currency or the currency that my microservice has not yet provided, you will receive this message
                 print("Currency Rates Source Not Ready yet!!! sorry for inconvenience")
-II. Currency code request
-    1. Request data
-        create an CurrCode object
-        call function get_code()
-        example:
-        curr_code = CurrCode('Japan')
-        response = curr_code.get_code()
-    2. Receive data
-        data will return to response variable
-    3. put them together
-        from country_currency_code import CurrCode
+II. Currency code request <br>
+    1. Request data <br>
+        create an CurrCode object<br>
+        call function get_code()<br>
+        example:<br>
+        curr_code = CurrCode('Japan')<br>
+        response = curr_code.get_code()<br>
+    2. Receive data<br>
+        data will return to response variable<br>
+    3. put them together<br>
+        from country_currency_code import CurrCode<br>
 
         curr_code = CurrCode('Japan')
         response = curr_code.get_code()
@@ -59,6 +59,6 @@ II. Currency code request
         else:
             print(response.decode('UTF-8'))
 
-            
+![Sequence](./Sequence.jpeg)
 
             
